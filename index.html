@@ -3,78 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD Student Academic Profile</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap">
+    <title>Academic Profile</title>
     <style>
-        body, html {
+        * {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
-        header {
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
             width: 100%;
-            background-color: teal;
-            color: white;
             text-align: center;
-            padding: 2em 0;
+            padding: 2rem 0;
+            background-color: #f8f9fa;
         }
-        .profile-photo {
+
+        .profile-img {
             width: 100%;
+            max-height: 400px;
+            object-fit: cover;
         }
-        .profile-info {
+
+        .bio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
             text-align: center;
-            padding: 1em;
         }
-        nav {
+
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .designation {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .short-bio {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .navbar {
             position: sticky;
             top: 0;
-            background-color: cyan;
-            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
-        nav a {
-            color: white;
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .nav-link {
             text-decoration: none;
-            padding: 0.5em 1em;
+            color: #333;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
-        main {
-            padding: 2em;
+
+        .nav-link:hover {
+            background-color: #f0f0f0;
         }
+
         .section {
-            margin-bottom: 2em;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .section h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .experience-item, .publication-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .nav-link {
+                margin: 0.25rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="MIAI_profile_pic.jpeg" alt="Profile Photo" class="profile-photo">
-        <div class="profile-info">
-            <h1>Name</h1>
-            <h2>Designation</h2>
-            <p>Short Bio sentence...</p>
+    <header class="header">
+        <!-- <img src="/api/placeholder/1200/40" alt="Profile Photo" class="profile-img"> -->
+        <img src="MIAI_profile_pic.jpeg" alt="Profile Photo" class="profile-img">
+        <div class="bio-container">
+            <h1 class="name">Modini Ayyagari</h1>
+            <div class="designation">Computer Engineering Doctoral Student at North Caroline State University</div>
+            <p class="short-bio">Exploring the dual role of physical side-channels in hardware security, uncovering their potential to be used as both attacks and defense strategies in AI/ML Hardware.</p>
         </div>
     </header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#experience">My Experience</a>
-        <a href="#publications">My Publications</a>
-        <a href="#contact">Contact Information</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
     </nav>
+
     <main>
-        <div id="about" class="section">
+        <section id="about" class="section">
             <h2>About Me</h2>
-            <p>Placeholder for about me content...</p>
-        </div>
-        <div id="experience" class="section">
-            <h2>My Experience</h2>
-            <p>Placeholder for experience content...</p>
-        </div>
-        <div id="publications" class="section">
-            <h2>My Publications</h2>
-            <p>Placeholder for publications content...</p>
-        </div>
-        <div id="contact" class="section">
-            <h2>Contact Information</h2>
-            <p>Placeholder for contact information...</p>
-        </div>
+            <p>
+                Hello, I am Modini Ayyagari, pursuing a Doctorate in Computer Engineering at North Carolina State University, guided by Dr. Aydin Aysu at the Hardware Cyberthreat Research (HECTOR) Lab.
+
+My primary research interest lies in the realm of hardware security. I am currently in my first year of pursuing a PhD, focusing on understanding the fundamentals of hardware security, physical side-channels, and fault attacks on cryptographic and AI/ML hardware. In my research I am investigating the dual role of physical side channels in hardware security, exploring their potential to be both offensive and defensive strategies for AI/ML semiconductor chips.
+
+Prior to beginning my PhD, I accumulated 4.5 years of industry experience as an RTL Design Engineer at Infineon Technologies. During this time, I developed Soft IPs for CPU Sub-Systems, cryptographic accelerators, memory controllers, data transfer engines, and ML accelerators.
+            </p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <h4>HECTOR Lab, Electronics and Computer Engineering Department, North Carolina State University</h4>
+                <h5>2024-Present</h5>
+            </div>
+            <div class="experience-item">
+                <h3>Staff Electrical Design Engineer</h3>
+                <h4>Infineon Technologies + Cypress Semiconductor Corporation</h4>
+                <h5>2019-2024</h5>h5>
+                <p>During my tenure as an RTL Design Engineer, I led the development of next-generation ARM Cortex-M85 and Cortex-M55 CPU Sub-Systems, enhancing their micro-architecture to support additional external bus-masters with special access permissions and protection schemes. I also developed and maintained hardware accelerator SoftIPs for cryptography, data transfer engines, and programmable IO, achieving a 200x performance gain for AI accelerator SoftIP. My work included performing latency analysis for SoC Memory SoftIP, and identifying and proposing solutions for performance bottlenecks. I managed memory controller IPs, enhancing their reliability features and implementing new memory macros. Additionally, I mentored new graduates and interns, providing technical guidance and actionable feedback.</p>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <div class="publication-item">
+                <h3>Efficient Implementation of Pooling Operation for AI Accelerators</h3>
+                <p>Modini Ayyagari; Vijay Deep Bhatt; Ashutosh Pandey</p>
+                <p>2022 IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), 2022</p>
+                <a href="https://ieeexplore.ieee.org/document/10176216" target="_blank">IEEE publication</a>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email: mayyaga2@ncsu.edu</p>
+            </div>
+        </section>
     </main>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active state to navigation links based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.backgroundColor = '';
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.style.backgroundColor = '#f0f0f0';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
