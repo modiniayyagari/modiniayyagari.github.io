@@ -16,15 +16,18 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 1200px;
+            background-color: #EDE7F6;
+        }
+
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
-            background-color: #F5F5F5; /* Light grey background */
         }
 
         .header {
             width: 100%;
-            background-color: #EDE7F6; /* Deep Purple 50 */
+            background-color: #FFF;
             padding: 3rem;
             margin-bottom: 2rem;
             border-radius: 8px;
@@ -72,12 +75,11 @@
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
-            margin: 2rem -2rem;
-            padding: 0 2rem;
+            width: 100%;
         }
 
         .nav-container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -98,8 +100,8 @@
         }
 
         .section {
-            max-width: 800px;
-            margin: 2rem auto;
+            width: 100%;
+            margin: 2rem 0;
             padding: 2rem;
             background-color: #fff;
             border-radius: 8px;
@@ -108,9 +110,10 @@
 
         .section h2 {
             margin-bottom: 1.5rem;
-            color: #673AB7; /* Deep Purple 500 */
+            color: #673AB7;
         }
 
+        /* Rest of the styles remain the same */
         .education-item {
             margin-bottom: 2rem;
         }
@@ -122,7 +125,7 @@
         }
 
         .degree-type {
-            background-color: #673AB7; /* Deep Purple 500 */
+            background-color: #673AB7;
             color: white;
             padding: 0.5rem 1rem;
             font-weight: normal;
@@ -161,7 +164,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background-color: #B39DDB; /* Deep Purple 200 */
+            background-color: #B39DDB;
         }
 
         .experience-item {
@@ -178,8 +181,8 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: #7E57C2; /* Deep Purple 400 */
-            border: 4px solid #EDE7F6; /* Deep Purple 50 */
+            background-color: #7E57C2;
+            border: 4px solid #EDE7F6;
         }
 
         .experience-item h3 {
@@ -206,17 +209,6 @@
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            .experience-timeline {
-                margin-left: 0;
-                padding-left: 30px;
-            }
-
-            .experience-item::before {
-                left: -36px;
-            }
         }
 
         .publication-item h3 {
@@ -269,7 +261,7 @@
         }
 
         @media (max-width: 768px) {
-            body {
+            .container {
                 padding: 1rem;
             }
 
@@ -296,116 +288,127 @@
             .nav-link {
                 margin: 0.25rem;
             }
+
+            .experience-timeline {
+                margin-left: 0;
+                padding-left: 30px;
+            }
+
+            .experience-item::before {
+                left: -36px;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <img src="MIAI_profile_pic.jpeg" alt="Profile Photo" class="profile-img">
-        <div class="bio-container">
-            <h1 class="name">Modini Ayyagari</h1>
-            <div class="designation">Computer Engineering Doctoral Student at North Carolina State University</div>
-            <p class="short-bio">Exploring the dual role of physical side-channels in hardware security, uncovering their potential to be used as both attacks and defense strategies in AI/ML Hardware.</p>
-        </div>
-    </header>
+    <div class="container">
+        <header class="header">
+            <img src="MIAI_profile_pic.jpeg" alt="Profile Photo" class="profile-img">
+            <div class="bio-container">
+                <h1 class="name">Modini Ayyagari</h1>
+                <div class="designation">Computer Engineering Doctoral Student at North Carolina State University</div>
+                <p class="short-bio">Exploring the dual role of physical side-channels in hardware security, uncovering their potential to be used as both attacks and defense strategies in AI/ML Hardware.</p>
+            </div>
+        </header>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#publications" class="nav-link">Publications</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-    </nav>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                Hello, I am Modini Ayyagari, pursuing a Doctorate in Computer Engineering at North Carolina State University, guided by Dr. Aydin Aysu at the Hardware Cyberthreat Research (HECTOR) Lab.
-                <br>
-                My primary research interest lies in the realm of hardware security. I am currently in my first year of pursuing a PhD, focusing on understanding the fundamentals of hardware security, physical side-channels, and fault attacks on cryptographic and AI/ML hardware. In my research I am investigating the dual role of physical side channels in hardware security, exploring their potential to be both offensive and defensive strategies for AI/ML semiconductor chips.
-                <br>
-                Prior to beginning my PhD, I accumulated 4.5 years of industry experience as an RTL Design Engineer at Infineon Technologies. During this time, I developed Soft IPs for CPU Sub-Systems, cryptographic accelerators, memory controllers, data transfer engines, and ML accelerators.
-            </p>
-        </section>
+        <main>
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <p>
+                    Hello, I am Modini Ayyagari, pursuing a Doctorate in Computer Engineering at North Carolina State University, guided by Dr. Aydin Aysu at the Hardware Cyberthreat Research (HECTOR) Lab.
+                    <br><br>
+                    My primary research interest lies in the realm of hardware security. I am currently in my first year of pursuing a PhD, focusing on understanding the fundamentals of hardware security, physical side-channels, and fault attacks on cryptographic and AI/ML hardware. In my research I am investigating the dual role of physical side channels in hardware security, exploring their potential to be both offensive and defensive strategies for AI/ML semiconductor chips.
+                    <br><br>
+                    Prior to beginning my PhD, I accumulated 4.5 years of industry experience as an RTL Design Engineer at Infineon Technologies. During this time, I developed Soft IPs for CPU Sub-Systems, cryptographic accelerators, memory controllers, data transfer engines, and ML accelerators.
+                </p>
+            </section>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <div class="education-header">
-                    <span class="degree-type">Ph.D.</span>
-                    <span class="degree-year">Expected 2028</span>
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <span class="degree-type">Ph.D.</span>
+                        <span class="degree-year">Expected 2028</span>
+                    </div>
+                    <div class="degree-field">Computer Engineering</div>
+                    <div class="institution">North Carolina State University, Raleigh, North Carolina, United States</div>
                 </div>
-                <div class="degree-field">Computer Engineering</div>
-                <div class="institution">North Carolina State University, Raleigh, North Carolina, United States</div>
-            </div>
-            <div class="education-item">
-                <div class="education-header">
-                    <span class="degree-type">M.Tech</span>
-                    <span class="degree-year">2022</span>
+                <div class="education-item">
+                    <div class="education-header">
+                        <span class="degree-type">M.Tech</span>
+                        <span class="degree-year">2022</span>
+                    </div>
+                    <div class="degree-field">Microelectronics</div>
+                    <div class="institution">Birla Institute of Science and Technology, Pilani, Rajasthan, India</div>
                 </div>
-                <div class="degree-field">Microelectronics</div>
-                <div class="institution">Birla Institute of Science and Technology, Pilani, Rajasthan, India</div>
-            </div>
-            <div class="education-item">
-                <div class="education-header">
-                    <span class="degree-type">B.Tech</span>
-                    <span class="degree-year">2019</span>
+                <div class="education-item">
+                    <div class="education-header">
+                        <span class="degree-type">B.Tech</span>
+                        <span class="degree-year">2019</span>
+                    </div>
+                    <div class="degree-field">Electronics and Communication Engineering</div>
+                    <div class="institution">Institute of Technology Nirma University, Ahmedabad, Gujarat, India</div>
                 </div>
-                <div class="degree-field">Electronics and Communication Engineering</div>
-                <div class="institution">Institute of Technology Nirma University, Ahmedabad, Gujarat, India</div>
-            </div>
-        </section>
+            </section>
 
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <h3>Research Assistant</h3>
-                    <h4>HECTOR Lab, Electronics and Computer Engineering Department, North Carolina State University</h4>
-                    <h5>July 2024 - Present</h5>
+            <section id="experience" class="section">
+                <h2>Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <h3>Research Assistant</h3>
+                        <h4>HECTOR Lab, Electronics and Computer Engineering Department, North Carolina State University</h4>
+                        <h5>July 2024 - Present</h5>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Staff Electrical Design Engineer</h3>
+                        <h4>Infineon Technologies + Cypress Semiconductor Corporation</h4>
+                        <h5>January 2019 - June 2024</h5>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Staff Electrical Design Engineer</h3>
-                    <h4>Infineon Technologies + Cypress Semiconductor Corporation</h4>
-                    <h5>January 2019 - June 2024</h5>
+            </section>
+
+            <section id="publications" class="section">
+                <h2>Publications</h2>
+                <div class="publication-item">
+                    <h3>Efficient Implementation of Pooling Operation for AI Accelerators</h3>
+                    <p>Modini Ayyagari; Vijay Deep Bhatt; Ashutosh Pandey</p>
+                    <p>2022 IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), 2022</p>
+                    <a href="https://ieeexplore.ieee.org/document/10176216" target="_blank">IEEE publication</a>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="publications" class="section">
-            <h2>Publications</h2>
-            <div class="publication-item">
-                <h3>Efficient Implementation of Pooling Operation for AI Accelerators</h3>
-                <p>Modini Ayyagari; Vijay Deep Bhatt; Ashutosh Pandey</p>
-                <p>2022 IEEE International Conference for Women in Innovation, Technology & Entrepreneurship (ICWITE), 2022</p>
-                <a href="https://ieeexplore.ieee.org/document/10176216" target="_blank">IEEE publication</a>
-            </div>
-        </section>
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <p>Email: mayyaga2@ncsu.edu</p>
+                </div>
+            </section>
+        </main>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p>Email: mayyaga2@ncsu.edu</p>
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/modini-ayyagari" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=w0DbqwoAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="https://github.com/modiniayyagari" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/modini-ayyagari" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=w0DbqwoAAAAJ&hl=en" target="_blank" title="Google Scholar">
-                <i class="fas fa-graduation-cap"></i>
-            </a>
-            <a href="https://github.com/modiniayyagari" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -435,7 +438,7 @@
             navLinks.forEach(link => {
                 link.style.backgroundColor = '';
                 if (link.getAttribute('href').substring(1) === currentSection) {
-                    link.style.backgroundColor = '#D1C4E9'; /* Deep Purple 100 */
+                    link.style.backgroundColor = '#D1C4E9';
                 }
             });
         });
